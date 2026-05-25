@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fale Conosco</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #eef6ff;
+      color: #333;
+    }
+
+    header {
+      background-color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0b6ed0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0b6ed0;
+      margin-left: 25px;
+      font-weight: bold;
+    }
+
+    .container {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .container h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .container p {
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .form-box {
+      background-color: white;
+      max-width: 500px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .form-box label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    .form-box input,
+    .form-box textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    .form-box textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    button {
+      background-color: #0b6ed0;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #084f96;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: white;
+      margin-top: 40px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">GestãoVendas</div>
+
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Funcionalidades</a>
+      <a href="#">Planos</a>
+      <a href="#">Fale Conosco</a>
+    </nav>
+  </header>
+
+  <section class="container">
+    <h1>Fale Conosco</h1>
+    <p>Tem alguma dúvida ou precisa de ajuda? Envie uma mensagem para nossa equipe.</p>
+
+    <div class="form-box">
+      <form>
+        
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" placeholder="Digite sua mensagem" required></textarea>
+
+        <button type="submit">Enviar mensagem</button>
+
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>©️ 2026 GestãoVendas - Sistema de Gestão de Vendas</p>
+  </footer>
+
+</body>
+</html>

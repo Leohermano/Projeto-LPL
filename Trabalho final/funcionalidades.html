@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funcionalidades — SalesHub Pro</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6%;
+      height: 60px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .logo { font-size: 1.1rem; font-weight: bold; text-decoration: none; color: #1a1a1a; }
+    .logo span { color: #007bff; }
+
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { color: #555; text-decoration: none; font-size: 0.9rem; }
+    .nav-links a:hover { color: #1a1a1a; }
+
+    .nav-cta {
+      background: #007bff; color: #fff;
+      padding: .45rem 1.1rem; border-radius: 5px;
+      font-size: 0.85rem; font-weight: bold; text-decoration: none;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 60px 6% 48px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .hero h1 { font-size: 2rem; font-weight: bold; margin-bottom: .75rem; }
+    .hero h1 span { color: #007bff; }
+    .hero p { color: #555; max-width: 480px; margin: 0 auto 1.6rem; }
+
+    .btns { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; }
+    .btn-p { background: #007bff; color: #fff; padding: .65rem 1.6rem; border-radius: 5px; font-weight: bold; font-size: .9rem; text-decoration: none; }
+    .btn-s { background: #fff; color: #1a1a1a; padding: .65rem 1.5rem; border-radius: 5px; border: 1px solid #ccc; font-size: .9rem; text-decoration: none; }
+
+    /* FEATURES */
+    .features { max-width: 1000px; margin: 0 auto; padding: 0 6% 48px; }
+
+    .section { margin-top: 40px; }
+
+    .section-title {
+      font-size: .75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #007bff;
+      margin-bottom: .75rem;
+      padding-bottom: .6rem;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #e5e5e5; border: 1px solid #e5e5e5; border-radius: 8px; overflow: hidden; }
+    .grid.g2 { grid-template-columns: repeat(2, 1fr); }
+
+    .cell { background: #fff; padding: 1.2rem 1.3rem; }
+    .cell:hover { background: #f9f9f9; }
+    .cell h3 { font-size: .9rem; font-weight: bold; margin-bottom: .3rem; }
+    .cell p { color: #666; font-size: .83rem; }
+
+    /* CTA */
+    .cta {
+      margin: 0 6% 48px;
+      padding: 36px;
+      text-align: center;
+      background: #f4f8ff;
+      border: 1px solid #d0e2ff;
+      border-radius: 8px;
+    }
+    .cta h2 { font-size: 1.4rem; margin-bottom: .5rem; }
+    .cta p { color: #555; font-size: .9rem; margin-bottom: 1.4rem; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #e5e5e5;
+      padding: 24px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: .75rem;
+    }
+    .footer-links { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+    .footer-links a { color: #888; text-decoration: none; font-size: .82rem; }
+    .footer-links a:hover { color: #1a1a1a; }
+    .copy { color: #aaa; font-size: .78rem; }
+
+    @media (max-width: 680px) {
+      .grid, .grid.g2 { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 420px) {
+      .grid, .grid.g2 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">SalesHub <span>Pro</span></a>
+  <ul class="nav-links">
+    <li><a href="#">Funcionalidades</a></li>
+    <li><a href="#">Planos</a></li>
+    <li><a href="#">Contato</a></li>
+  </ul>
+  <a href="#" class="nav-cta">Teste grátis</a>
+</nav>
+
+<section class="hero">
+  <h1>Funcionalidades do <span>SalesHub Pro</span></h1>
+  <p>Tudo que o seu time de vendas precisa para fechar mais negócios, em um só lugar.</p>
+  <div class="btns">
+    <a href="#" class="btn-p">Começar grátis</a>
+    <a href="#" class="btn-s">Ver demonstração</a>
+  </div>
+</section>
+
+<div class="features">
+
+  <div class="section">
+    <div class="section-title">Vendas e Metas</div>
+    <div class="grid">
+      <div class="cell"><h3>Metas por vendedor</h3><p>Defina metas individuais e acompanhe o progresso de cada vendedor em tempo real.</p></div>
+      <div class="cell"><h3>Comissões automáticas</h3><p>Cálculo automático por produto ou valor de venda. Sem planilhas, sem erro manual.</p></div>
+      <div class="cell"><h3>Dashboard de vendas</h3><p>Ticket médio, conversão e volume em um painel atualizado ao vivo.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Pipeline e Oportunidades</div>
+    <div class="grid">
+      <div class="cell"><h3>Kanban de oportunidades</h3><p>Visualize e mova negócios entre etapas do funil com arrastar e soltar.</p></div>
+      <div class="cell"><h3>Follow-up automático</h3><p>Lembretes automáticos para que nenhuma oportunidade fique parada na fila.</p></div>
+      <div class="cell"><h3>Propostas e contratos</h3><p>Gere propostas e envie com link de assinatura digital sem sair da plataforma.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Relatórios</div>
+    <div class="grid g2">
+      <div class="cell"><h3>Análise de conversão</h3><p>Veja onde as oportunidades travam no funil e ajuste o processo.</p></div>
+      <div class="cell"><h3>Relatório financeiro</h3><p>Receita realizada vs. projetada, comissões e margem — exportável em um clique.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Clientes, Integrações e Equipe</div>
+    <div class="grid">
+      <div class="cell"><h3>CRM integrado</h3><p>Histórico completo de cada cliente: compras, interações e preferências.</p></div>
+      <div class="cell"><h3>WhatsApp e E-mail</h3><p>Envie follow-ups e propostas direto do CRM, com histórico salvo automaticamente.</p></div>
+      <div class="cell"><h3>Perfis de acesso</h3><p>Vendedores veem só a própria carteira. Gerentes têm visão completa do time.</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="cta">
+  <h2>Pronto para vender mais?</h2>
+  <p>14 dias grátis. Sem cartão de crédito, sem compromisso.</p>
+  <div class="btns">
+    <a href="#" class="btn-p">Criar conta grátis</a>
+    <a href="#" class="btn-s">Falar com vendas</a>
+  </div>
+</div>
+
+<footer>
+  <a href="#" class="logo">SalesHub <span>Pro</span></a>
+  <div class="footer-links">
+    <a href="#">Funcionalidades</a>
+    <a href="#">Planos</a>
+    <a href="#">Suporte</a>
+    <a href="#">Privacidade</a>
+  </div>
+  <span class="copy">© 2026 SalesHub Pro</span>
+</footer>
+
+</body>
+</html>

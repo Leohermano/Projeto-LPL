@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planos e Preços</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #eef6ff;
+      color: #333;
+    }
+
+    header {
+      background-color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0b6ed0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0b6ed0;
+      margin-left: 25px;
+      font-weight: bold;
+    }
+
+    .container {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .container h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .container p {
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .planos {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .plano {
+      background-color: white;
+      width: 280px;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .plano.destaque {
+      background-color: #145c91;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .plano h2 {
+      margin-bottom: 10px;
+    }
+
+    .preco {
+      font-size: 34px;
+      font-weight: bold;
+      margin: 20px 0;
+      color: #0b6ed0;
+    }
+
+    .destaque .preco {
+      color: white;
+    }
+
+    .preco span {
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      margin-top: 25px;
+    }
+
+    ul li {
+      margin: 12px 0;
+    }
+
+    ul li::before {
+      content: "✔ ";
+      color: #00b894;
+      font-weight: bold;
+    }
+
+    button {
+      background-color: #0b6ed0;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #084f96;
+    }
+
+    .destaque button {
+      background-color: white;
+      color: #145c91;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: white;
+      margin-top: 40px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">GestãoVendas</div>
+
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Funcionalidades</a>
+      <a href="#">Planos</a>
+      <a href="#">Fale Conosco</a>
+    </nav>
+  </header>
+
+  <section class="container">
+    <h1>Planos e Preços</h1>
+    <p>Escolha o plano ideal para organizar suas vendas e melhorar a gestão do seu negócio.</p>
+
+    <div class="planos">
+
+      <div class="plano">
+        <h2>Básico</h2>
+        <p>Para quem está começando</p>
+        <div class="preco">R$ 49<span>/mês</span></div>
+
+        <ul>
+          <li>Cadastro de produtos</li>
+          <li>Controle de vendas</li>
+          <li>Cadastro de clientes</li>
+          <li>Relatórios simples</li>
+        </ul>
+
+        <button>Escolher plano</button>
+      </div>
+
+      <div class="plano destaque">
+        <h2>Profissional</h2>
+        <p>Ideal para pequenos negócios</p>
+        <div class="preco">R$ 89<span>/mês</span></div>
+
+        <ul>
+          <li>Cadastro de produtos</li>
+          <li>Controle de estoque</li>
+          <li>Controle de vendas</li>
+          <li>Relatórios completos</li>
+          <li>Suporte por WhatsApp</li>
+        </ul>
+
+        <button>Escolher plano</button>
+      </div>
+
+      <div class="plano">
+        <h2>Empresarial</h2>
+        <p>Para empresas em crescimento</p>
+        <div class="preco">R$ 129<span>/mês</span></div>
+
+        <ul>
+          <li>Usuários ilimitados</li>
+          <li>Gestão de estoque</li>
+          <li>Relatórios avançados</li>
+          <li>Controle financeiro</li>
+          <li>Suporte prioritário</li>
+        </ul>
+
+        <button>Escolher plano</button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>©️ 2026 GestãoVendas - Sistema de Gestão de Vendas</p>
+  </footer>
+
+</body>
+</html>

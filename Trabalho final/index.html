@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SalesHub Pro</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background: #fff; color: #333; }
+.hotbar { position: fixed; top: 0; left: 0; width: 100%; background-color: #ffffff; border-bottom: 1px solid #e0e0e0; padding: 10px 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); z-index: 1000;}
+.hotbar ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: space-around;}
+.hotbar li { display: inline;}
+.minha-imagem {display: block;margin-left: auto;margin-right: auto;max-width: 100%;height: auto;}
+.hotbar a { text-decoration: none; color: #333333; font-weight: 600; padding: 10px 15px; transition: background-color 0.3s, color 0.3s;}
+.hotbar a:hover { background-color: #007bff; color: #ffffff; border-radius: 4px;}
+.header { background: linear-gradient(135deg, #2563eb, #1d4ed8); color: #fff; padding: 80px 20px 60px; text-align: center; margin-top: 36px; }
+.header h1 { font-size: 2.8em; margin-bottom: 10px; }
+.header p { font-size: 1.2em; opacity: 0.9; }
+.container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+.section-title { font-size: 2em; color: #2563eb; text-align: center; margin-bottom: 40px; }
+.about { text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1em; line-height: 1.8; }
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+.feature-card { background: #f8fafc; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s; }
+.feature-card:hover { transform: translateY(-5px); }
+.feature-card h3 { color: #2563eb; margin-bottom: 15px; }
+.feature-card p { color: #555; line-height: 1.6; }
+.differentials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.differential-item { background: #f8fafc; border-left: 4px solid #2563eb; padding: 20px; border-radius: 8px; }
+.differential-item h3 { color: #2563eb; margin-bottom: 10px; }
+.integration-content { display: flex; flex-wrap: wrap; align-items: center; gap: 40px; }
+.integration-text { flex: 1; min-width: 300px; }
+.integration-text ul { list-style: none; padding: 0; }
+.integration-text li { padding: 10px 0; border-bottom: 1px solid #e5e7eb; }
+.integration-text li::before { content: '✓ '; color: #2563eb; font-weight: bold; }
+.integration-image { flex: 1; min-width: 300px; text-align: center; }
+.integration-image img { max-width: 100%; height: auto; }
+.vantagens-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+.vantagem-card { background: #f8fafc; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.vantagem-card h3 { color: #2563eb; margin-bottom: 15px; }
+.footer { background: #111; color: #bbb; padding: 60px 20px 20px; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+.footer-col h4 { color: #fff; margin-bottom: 20px; font-size: 1.2em; }
+.footer-col ul { list-style: none; padding: 0; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a { color: #bbb; text-decoration: none; transition: color 0.3s; }
+.footer-col ul li a:hover { color: #fff; }
+.newsletter-form { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+.newsletter-form input { flex: 1; padding: 10px; border: none; border-radius: 5px; }
+.newsletter-form button { background: #2563eb; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
+.newsletter-form button:hover { background: #1d4ed8; }
+.social-icons { display: flex; gap: 15px; margin-top: 15px; }
+.social-icons a { display: inline-block; width: 40px; height: 40px; background: #333; color: #fff; text-align: center; line-height: 40px; border-radius: 50%; font-size: 18px; text-decoration: none; transition: background 0.3s; }
+.social-icons a:hover { background: #2563eb; }
+.footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid #333; margin-top: 30px; font-size: 14px; color: #777; }
+@media (max-width: 768px) {
+.header h1 { font-size: 2em; }
+.header { padding: 60px 15px 40px; }
+.features-grid, .differentials-grid, .vantagens-grid { grid-template-columns: 1fr; }
+.integration-content { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+<div class="hotbar">
+        <ul>
+            <li><a href="funcionalidades.html">Funcionalidades</a></li>
+            <li><a href="pp.html">Planos e preços</a></li>
+            <li><a href="fc.html">Fale conosco</a></li>
+            <li><a href="TG.html">Teste grátis</a></li>
+        </ul>
+    </div>
+
+<header class="header">
+<h1>SalesHub Pro</h1>
+<p>A plataforma completa para impulsionar suas vendas</p>
+</header>
+
+<section class="container" id="sobre">
+<h2 class="section-title">Sobre o SalesHub Pro</h2>
+<div class="about">
+<p>O SalesHub Pro é uma plataforma de gestão de vendas e fidelização de clientes projetada para empresas que buscam otimizar seus processos comerciais. Com ferramentas integradas de CRM, automação de marketing e análise de dados, ajudamos seu negócio a crescer de forma sustentável.</p>
+<img src="img/Gemini_Generated_Image_pkw0g6pkw0g6pkw0.png" alt="IMG1" class="minha-imagem">
+</div>
+</section>
+
+<section class="container" id="recursos">
+<h2 class="section-title">Principais Recursos</h2>
+<div class="features-grid">
+<div class="feature-card">
+<h3>CRM Inteligente</h3>
+<p>Gerencie leads e clientes com um CRM completo e fácil de usar.</p>
+</div>
+<div class="feature-card">
+<h3>Automação de Marketing</h3>
+<p>Crie campanhas automatizadas de e-mail e WhatsApp.</p>
+</div>
+<div class="feature-card">
+<h3>Relatórios Avançados</h3>
+<p>Acompanhe métricas de vendas, conversão e muito mais.</p>
+</div>
+<div class="feature-card">
+<h3>Suporte 24h</h3>
+<p>Equipe dedicada para ajudar você sempre que precisar.</p>
+</div>
+</div>
+</section>
+
+<section class="container" id="por-que-somos-melhores">
+<h2 class="section-title">Por Que Somos a Melhor Plataforma?</h2>
+<div class="differentials-grid">
+<div class="differential-item">
+<h3>Interface Intuitiva</h3>
+<p>Design moderno e fácil de navegar, sem curva de aprendizado.</p>
+</div>
+<div class="differential-item">
+<h3>Escalabilidade</h3>
+<p>Funciona para pequenas empresas e grandes corporações.</p>
+</div>
+<div class="differential-item">
+<h3>Segurança de Dados</h3>
+<p>Proteção com criptografia de ponta a ponta.</p>
+</div>
+<div class="differential-item">
+<h3>Suporte Premium</h3>
+<p>Atendimento personalizado e ágil.</p>
+</div>
+<div class="differential-item">
+<h3>Integração Sem Fricção</h3>
+<p>Conecta com 50+ plataformas (Nuvemshop, Shopify, Contabilidade, etc.)</p>
+</div>
+<div class="differential-item">
+<h3>Custo-Benefício</h3>
+<p>Sem taxa de setup, sem contratos longos e que cabe no seu bolso.</p>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<section class="container" id="integracao">
+<h2 class="section-title">Integração Com Plataformas e-Commerces</h2>
+<div class="integration-content">
+<div class="integration-text">
+<p>O SalesHub Pro se integra perfeitamente com as principais plataformas de e-commerce, garantindo sincronização automática de:</p>
+<ul>
+<li>Produtos</li>
+<li>Pedidos</li>
+<li>Estoque</li>
+</ul>
+<p>Com nossa API robusta, você mantém todas as informações atualizadas em tempo real, eliminando retrabalho e erros manuais.</p>
+</div>
+<div class="integration-image">
+<img src="img/Gemini_Generated_Image_rn9tqern9tqern9t.png" alt="IMG2.">
+</div>
+</div>
+</section>
+
+<section class="container" id="integracao">
+<h2 class="section-title">Clientela e Vendas</h2>
+<div class="integration-content">
+<div class="integration-text">
+<h3>Vendas, Frente de Caixa E Notas Fiscais Automáticas</h3>
+<p>Faça vendas em 7 segundos, emita cupons de venda ou notas fiscais em 1 clique e esteja por dentro de todas as movimentações do caixa de sua loja. Gerencie vendedores, metas, comissões e recebimentos de forma prática e não perca tempo calculando e registrando números confusos do dia a dia.</p>
+</div>
+<div class="integration-image">
+<img src="img/Gemini_Generated_Image_nfxvnfnfxvnfnfxv.png" alt="IMG3.">
+</div>
+</div>
+</section>
+
+<section class="container" id="com-o-saleshub">
+<h2 class="section-title">Com o SalesHub você tem...</h2>
+<div class="vantagens-grid">
+<div class="vantagem-card">
+<h3>Cadastro de Clientes</h3>
+<p>Organize todos os dados dos seus clientes em um só lugar.</p>
+</div>
+<div class="vantagem-card">
+<h3>WhatsApp Integrado</h3>
+<p>Comunique-se diretamente com seus clientes pelo WhatsApp.</p>
+</div>
+<div class="vantagem-card">
+<h3>Cartão Fidelidade</h3>
+<p>Crie programas de fidelidade personalizados e aumente as vendas.</p>
+</div>
+</div>
+</section>
+
+
+
+<!--FOOTER-->
+<footer class="footer">
+<div class="footer-grid">
+<div class="footer-col">
+<h4>SalesHub Pro</h4>
+<p style="line-height:1.6;">Sua plataforma completa de vendas e fidelização. Transforme seu negócio.</p>
+</div>
+<div class="footer-col">
+<h4>Links</h4>
+<ul>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#recursos">Recursos</a></li>
+<li><a href="#integracao">Integrações</a></li>
+<li><a href="#">Preços</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Contato</h4>
+<ul>
+<li>contato@saleshubpro.com</li>
+<li>+55 (83) 998034-4123</li>
+<li>Rua Almirante Barroso, 693 - Cabedelo/PB</li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Newsletter</h4>
+<p>Receba novidades e ofertas especiais.</p>
+<form class="newsletter-form">
+<input type="email" placeholder="Seu e-mail" required>
+<button type="submit">Assinar</button>
+</form>
+<div class="social-icons">
+<a href="#" aria-label="Facebook">F</a>
+<a href="#" aria-label="Instagram">I</a>
+<a href="#" aria-label="LinkedIn">L</a>
+<a href="#" aria-label="YouTube">Y</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2025 SalesHub Pro. Todos os direitos reservados.</p>
+</div>
+</footer>
+
+</body>
+</html>
